@@ -33,8 +33,6 @@ MODEM_CHAT_SCRIPT_CMDS_DEFINE(
 	MODEM_CHAT_SCRIPT_CMD_RESP("AT+CMEE=1", ok_match),
 	MODEM_CHAT_SCRIPT_CMD_RESP("AT+CREG=1", ok_match),
 	MODEM_CHAT_SCRIPT_CMD_RESP("AT+CEREG=1", ok_match),
-	MODEM_CHAT_SCRIPT_CMD_RESP("AT+CREG?", ok_match),
-	MODEM_CHAT_SCRIPT_CMD_RESP("AT+CEREG?", ok_match),
 	MODEM_CHAT_SCRIPT_CMD_RESP("AT+CGSN", imei_match), MODEM_CHAT_SCRIPT_CMD_RESP("", ok_match),
 	MODEM_CHAT_SCRIPT_CMD_RESP("AT+CGMM", cgmm_match), MODEM_CHAT_SCRIPT_CMD_RESP("", ok_match),
 	MODEM_CHAT_SCRIPT_CMD_RESP("AT+CGMI", cgmi_match), MODEM_CHAT_SCRIPT_CMD_RESP("", ok_match),
@@ -46,12 +44,9 @@ MODEM_CHAT_SCRIPT_DEFINE(quectel_bg770_init_chat_script, quectel_bg770_init_chat
 			 abort_matches, modem_cellular_chat_callback_handler, 10);
 
 MODEM_CHAT_SCRIPT_CMDS_DEFINE(quectel_bg770_dial_chat_script_cmds,
-			      MODEM_CHAT_SCRIPT_CMD_RESP("AT+QCFGEXT=\"FTP_SERVER\",1", ok_match),
 			      MODEM_CHAT_SCRIPT_CMD_RESP("AT+CGATT?", ok_match),
 			      MODEM_CHAT_SCRIPT_CMD_RESP("AT+QCFGEXT=\"pppmapping/subprofile\",0",
 							 ok_match),
-			      MODEM_CHAT_SCRIPT_CMD_RESP("AT+CGPADDR", ok_match),
-			      MODEM_CHAT_SCRIPT_CMD_RESP("AT+CGDCONT?", ok_match),
 			      MODEM_CHAT_SCRIPT_CMD_RESP("ATD*99***1#", connect_match));
 
 MODEM_CHAT_SCRIPT_DEFINE(quectel_bg770_dial_chat_script, quectel_bg770_dial_chat_script_cmds,
