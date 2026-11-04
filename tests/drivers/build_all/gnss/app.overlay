@@ -23,6 +23,10 @@
 				compatible = "luatos,air530z";
 			};
 
+			gnss_lc79h: lc79h {
+				compatible = "quectel,lc79h";
+			};
+
 			gnss_lc86g: lc86g {
 				compatible = "quectel,lc86g";
 				pps-mode = "GNSS_PPS_MODE_ENABLED";

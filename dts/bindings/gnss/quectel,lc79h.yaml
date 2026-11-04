@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+description: Quectel LC79H UART GNSS receiver with PAIR Host EPO assistance
+compatible: "quectel,lc79h"
+include: uart-device.yaml
