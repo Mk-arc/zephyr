@@ -1,0 +1,19 @@
+/*
+ * SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/ {
+	test_uart: test-uart {
+		compatible = "zephyr,uart-emul";
+		current-speed = <115200>;
+		status = "okay";
+		rx-fifo-size = <2048>;
+		tx-fifo-size = <256>;
+
+
+		gnss: gnss {
+			compatible = "quectel,lc79h";
+			status = "okay";
+		};
+	};
+};

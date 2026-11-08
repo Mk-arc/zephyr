@@ -1993,6 +1993,10 @@ New Drivers
 
 * :abbr:`GNSS (Global Navigation Satellite System)`
 
+  * Add :dtcompatible:`quectel,lc79h` with NMEA fixes and vendor extensions for
+    reference UTC, reference position, GPS/GLONASS Host EPO records and EPO status.
+    The driver also supports querying the enabled satellite systems.
+
   * :dtcompatible:`ericsson,f5521gw` (:github:`113055`)
   * :dtcompatible:`u-blox,m10` (:github:`110846`)
 
